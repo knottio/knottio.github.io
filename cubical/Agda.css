@@ -25,7 +25,7 @@
 
 .Agda {
   overflow-x: auto;
-  font-family: 'PragmataPro Mono', 'Julia Mono', 'Iosevka', 'Fantasque Sans Mono', 'Roboto Mono', monospace;
+  font-family: 'PragmataPro Mono', JuliaMono, 'Iosevka', 'Fantasque Sans Mono', 'Roboto Mono', monospace;
   font-weight: 400;
 }
 
