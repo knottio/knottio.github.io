@@ -1,41 +1,130 @@
+:root {
+  --base03:  #002b36;
+  --base02:  #073642;
+  --base01:  #586e75;
+  --base00:  #657b83;
+  --base0:   #839496;
+  --base1:   #93a1a1;
+  --base2:   #eee8d5;
+  --base3:   #fdf6e3;
+  --yellow:  #b58900;
+  --orange:  #cb4b16;
+  --red:     #dc322f;
+  --magenta: #d33682;
+  --violet:  #6c71c4;
+  --blue:    #268bd2;
+  --cyan:    #2aa198;
+  --green:   #859900;
+
+  --bg: var(--base03);
+  --fg: var(--base0);
+
+  font-size: 28px;
+  background-color: var(--bg);
+}
+
+.Agda {
+  overflow-x: auto;
+  font-family: 'PragmataPro Mono', 'Julia Mono', 'Iosevka', 'Fantasque Sans Mono', 'Roboto Mono', monospace;
+  font-weight: 400;
+}
+
+.Agda .Argument { color: var(--fg) }
+
 /* Aspects. */
-.Agda .Comment       { color: #B22222 }
+.Agda .Comment       { color: var(--base1)  }
 .Agda .Background    {}
-.Agda .Markup        { color: #000000 }
-.Agda .Keyword       { color: #CD6600 }
-.Agda .String        { color: #B22222 }
-.Agda .Number        { color: #A020F0 }
-.Agda .Symbol        { color: #404040 }
-.Agda .PrimitiveType { color: #0000CD }
-.Agda .Pragma        { color: black   }
+.Agda .Markup        { color: var(--fg)     }
+.Agda .Keyword       { color: var(--orange) }
+.Agda .String        { color: var(--red)    }
+.Agda .Number        { color: var(--violet) }
+.Agda .Symbol        { color: var(--fg)     }
+.Agda .PrimitiveType { color: var(--blue)   }
+.Agda .Pragma        { color: var(--fg)     }
 .Agda .Operator      {}
 .Agda .Hole          { background: #B4EEB4 }
 
 /* NameKinds. */
-.Agda .Bound                  { color: black   }
-.Agda .Generalizable          { color: black   }
-.Agda .InductiveConstructor   { color: #008B00 }
-.Agda .CoinductiveConstructor { color: #8B7500 }
-.Agda .Datatype               { color: #0000CD }
-.Agda .Field                  { color: #EE1289 }
-.Agda .Function               { color: #0000CD }
-.Agda .Module                 { color: #A020F0 }
-.Agda .Postulate              { color: #0000CD }
-.Agda .Primitive              { color: #0000CD }
-.Agda .Record                 { color: #0000CD }
+.Agda .Bound                  { color: var(--fg)      }
+.Agda .Generalizable          { color: var(--fg)      }
+.Agda .InductiveConstructor   { color: var(--green)   }
+.Agda .CoinductiveConstructor { color: var(--yellow)  }
+.Agda .Datatype               { color: var(--blue)    }
+.Agda .Field                  { color: var(--magenta) }
+.Agda .Function               { color: var(--blue)    }
+.Agda .Module                 { color: var(--violet)  }
+.Agda .Postulate              { color: var(--blue)    }
+.Agda .Primitive              { color: var(--blue)    }
+.Agda .Record                 { color: var(--blue)    }
 
 /* OtherAspects. */
 .Agda .DottedPattern        {}
-.Agda .UnsolvedMeta         { color: black; background: yellow         }
-.Agda .UnsolvedConstraint   { color: black; background: yellow         }
-.Agda .TerminationProblem   { color: black; background: #FFA07A        }
-.Agda .IncompletePattern    { color: black; background: #F5DEB3        }
+.Agda .UnsolvedMeta         { color: var(--fg); background: yellow         }
+.Agda .UnsolvedConstraint   { color: var(--fg); background: yellow         }
+.Agda .TerminationProblem   { color: var(--fg); background: #FFA07A        }
+.Agda .IncompletePattern    { color: var(--fg); background: #F5DEB3        }
 .Agda .Error                { color: red;   text-decoration: underline }
-.Agda .TypeChecks           { color: black; background: #ADD8E6        }
-.Agda .Deadcode             { color: black; background: #808080        }
-.Agda .ShadowingInTelescope { color: black; background: #808080        }
+.Agda .TypeChecks           { color: var(--fg); background: #ADD8E6        }
+.Agda .Deadcode             { color: var(--fg); background: #808080        }
+.Agda .ShadowingInTelescope { color: var(--fg); background: #808080        }
 
 /* Standard attributes. */
 .Agda a { text-decoration: none }
-.Agda a[href]:hover { background-color: #B4EEB4 }
-.Agda [href].hover-highlight { background-color: #B4EEB4; }
+.Agda a[href]:hover { background-color: var(--base02) }
+.Agda [href].hover-highlight { background-color: var(--base02); }
+
+@font-face {
+  font-family: JuliaMono;
+  font-weight: 300;
+  font-style: normal;
+  src: url("../JuliaMono/JuliaMono-Light.woff2") format("woff2");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: JuliaMono;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../JuliaMono/JuliaMono-Regular.woff2") format("woff2");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: JuliaMono;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../JuliaMono/JuliaMono-Medium.woff2") format("woff2");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: JuliaMono;
+  font-weight: 600;
+  font-style: normal;
+  src: url("../JuliaMono/JuliaMono-SemiBold.woff2") format("woff2");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: JuliaMono;
+  font-weight: 700;
+  font-style: normal;
+  src: url("../JuliaMono/JuliaMono-Bold.woff2") format("woff2");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: JuliaMono;
+  font-weight: 800;
+  font-style: normal;
+  src: url("../JuliaMono/JuliaMono-ExtraBold.woff2") format("woff2");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: JuliaMono;
+  font-weight: 900;
+  font-style: normal;
+  src: url("../JuliaMono/JuliaMono-Black.woff2") format("woff2");
+  text-rendering: optimizeLegibility;
+}
